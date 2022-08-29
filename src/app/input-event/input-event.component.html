@@ -1,0 +1,18 @@
+<h1>Type any thing to check observable</h1>
+<input type="text" #search>
+<hr>
+ 
+<table>
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>repos_url</th>
+      <th>img</th>
+    </tr>
+    <tr *ngFor="let item of list; let i=index">
+      <td>{{item.id}}</td>
+      <td>{{item.login}}</td>
+      <td><a [href]="item.repos_url">{{item.repos_url}}</a></td>
+      <td><img [src]="item.avatar_url" width="100px"></td>
+    </tr>
+</table> 
